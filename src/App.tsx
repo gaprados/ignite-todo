@@ -2,6 +2,7 @@ import { useState } from 'react';
 import AddTask from './components/AddTask';
 import TaskCounter from './components/TaskCounter';
 import TaskList from './components/TaskList';
+import { usePersistedState } from './hooks/usePersistedState';
 import styles from './styles/App.module.css';
 
 export interface TaskProps {
@@ -11,7 +12,7 @@ export interface TaskProps {
 }
 
 function App() {
-  const [tasks, setTasks] = useState<TaskProps[]>([]);
+  const [tasks, setTasks] = usePersistedState<TaskProps>('tasks', []);
 
   function handleAddTask(task: TaskProps) {
     setTasks([...tasks, task]);
