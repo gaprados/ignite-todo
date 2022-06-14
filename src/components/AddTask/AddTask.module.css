@@ -50,3 +50,10 @@
   vertical-align: middle;
   margin: 0 0 0.125rem 0.5rem;
 }
+
+@media (max-width: 425px) {
+  .container {
+    flex-direction: column;
+    transform: translateY(-25%);
+  }
+}
