@@ -15,8 +15,14 @@ function TaskList({ tasks, onUpdateTask }: TaskListProps) {
       if (currTask.id === id) {
         return [...acc, { ...currTask, isCompleted: true }];
       }
+
       return [...acc, currTask];
     }, []);
+    onUpdateTask(updatedTasks);
+  }
+
+  function handleRemoveTask(id: string) {
+    const updatedTasks = tasks.filter((task) => task.id !== id);
     onUpdateTask(updatedTasks);
   }
 
@@ -26,7 +32,12 @@ function TaskList({ tasks, onUpdateTask }: TaskListProps) {
         <EmptyPage />
       ) : (
         tasks.map((task) => (
-          <TaskItem key={task.id} {...task} onUpdateTask={handleUpdateTask} />
+          <TaskItem
+            key={task.id}
+            {...task}
+            onUpdateTask={handleUpdateTask}
+            onRemoveTask={handleRemoveTask}
+          />
         ))
       )}
     </div>
