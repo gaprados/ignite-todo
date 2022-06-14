@@ -14,7 +14,7 @@ function TaskItem({
 }: TaskItemProps) {
   return (
     <div className={styles.container}>
-      <h1>{description}</h1>
+      <h1 className={isCompleted ? styles.done : ''}>{description}</h1>
 
       <button onClick={() => onUpdateTask(id)}>Update</button>
     </div>

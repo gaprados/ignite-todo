@@ -11,12 +11,13 @@ interface TaskListProps {
 
 function TaskList({ tasks, onUpdateTask }: TaskListProps) {
   function handleUpdateTask(id: string) {
-    const taskIndex = tasks.findIndex((task) => task.id === id);
-
-    let newTaskArray = [...tasks];
-    newTaskArray[taskIndex].isCompleted = !newTaskArray[taskIndex].isCompleted;
-
-    onUpdateTask(newTaskArray);
+    const updatedTasks = tasks.reduce((acc: TaskProps[], currTask) => {
+      if (currTask.id === id) {
+        return [...acc, { ...currTask, isCompleted: true }];
+      }
+      return [...acc, currTask];
+    }, []);
+    onUpdateTask(updatedTasks);
   }
 
   return (
