@@ -1,9 +1,11 @@
+import logoImg from '../../assets/logo.svg';
+
 import styles from './Header.module.css';
 
 export function Header() {
   return (
     <header className={styles.header}>
-      <img src='src/assets/logo.svg' alt='todo with rocket' />
+      <img src={logoImg} alt='todo with rocket' />
     </header>
   );
 }
