@@ -20,7 +20,7 @@ function App() {
   return (
     <div className={styles.container}>
       <AddTask onAddTask={handleAddTask} />
-      <TaskCounter />
+      <TaskCounter tasks={tasks} />
       <TaskList tasks={tasks} onUpdateTask={setTasks} />
     </div>
   );
