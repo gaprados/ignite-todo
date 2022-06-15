@@ -11,11 +11,11 @@
 
 </div>
 
-This project wast developed during Ignite course from [Rocketseat](https://rocketseat.com.br/).
-It's main goal is to apply and develop the main concepts of React framework.
+This project was developed during Ignite course from [Rocketseat](https://rocketseat.com.br/).
+Its main goal is to apply and develop the main concepts of React framework.
 
 The application is a simple to-do list, where you can add, complete and delete tasks.
-These tasks are stored in browser's local storage, so you can reuse the application even if you close the browser.
+These tasks are stored in browser's local storage, so you can reuse the application with previous registered tasks, even if you close the browser.
 
 There is a **[live demo](https://gabriel-devco.github.io/ignite-todo/)** deployed in Github Pages, where you can test it.
 
