@@ -37,4 +37,9 @@
 
 .done {
   text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.description {
+  color: var(--gray-100);
 }

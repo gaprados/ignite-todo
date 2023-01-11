@@ -13,7 +13,7 @@ function TaskList({ tasks, onUpdateTask }: TaskListProps) {
   function handleUpdateTask(id: string) {
     const updatedTasks = tasks.reduce((acc: TaskProps[], currTask) => {
       if (currTask.id === id) {
-        return [...acc, { ...currTask, isCompleted: true }];
+        return [...acc, { ...currTask, isCompleted: !currTask.isCompleted }];
       }
 
       return [...acc, currTask];

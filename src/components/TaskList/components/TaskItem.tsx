@@ -18,7 +18,7 @@ function TaskItem({
   return (
     <div className={styles.container}>
       <Checkbox isChecked={isCompleted} onComplete={() => onUpdateTask(id)} />
-      <p className={isCompleted ? styles.done : ''}>{description}</p>
+      <p className={isCompleted ? styles.done : styles.description}>{description}</p>
       <button onClick={() => onRemoveTask(id)}>
         <FiTrash2 />
       </button>

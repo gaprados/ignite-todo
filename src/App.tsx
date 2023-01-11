@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import AddTask from './components/AddTask';
+import { Filters } from './components/Filters';
 import TaskCounter from './components/TaskCounter';
 import TaskList from './components/TaskList';
 import { usePersistedState } from './hooks/usePersistedState';
@@ -21,6 +22,8 @@ function App() {
   return (
     <div className={styles.container}>
       <AddTask onAddTask={handleAddTask} />
+      {/* TODO: */}
+      {/* <Filters originalTasks={tasks} onChangeFilter={setTasks} /> */}
       <TaskCounter tasks={tasks} />
       <TaskList tasks={tasks} onUpdateTask={setTasks} />
     </div>
