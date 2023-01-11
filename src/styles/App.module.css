@@ -1,9 +1,0 @@
-.container {
-  padding: 0 22rem;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 2rem;
-  }
-}
